@@ -21,3 +21,15 @@ export default function App() {
   );
 }
 
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Anasayfa" component={Tracker} />
+        <Tab.Screen name="Profil" component={Tracker} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
