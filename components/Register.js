@@ -1,8 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState,ImageBackground} from "react";
-import { createStackNavigator } from '@react-navigation/stack';
-import Register from './Register'
-
 import {
   StyleSheet,
   Text,
@@ -13,19 +10,13 @@ import {
   TouchableOpacity,
 } from "react-native";
  
-
-
-
-
-
-export default function Login({navigation}) {
+export default function Register({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
   return (
-      
     <View style={styles.container}>
-        
+
       <Image style={styles.image} source={require("../assets/covid-19.png")} />
  
       <StatusBar style="auto" />
@@ -48,8 +39,8 @@ export default function Login({navigation}) {
         />
       </View>
         <View style={styles.register}>
-            <TouchableOpacity  onPress={() => navigation.navigate('Kayit')}>
-                <Text style={styles.register}>Forgot Password?</Text>
+            <TouchableOpacity>
+                <Text style={styles.register}>Forgot Passssssword?</Text>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Text style={styles.forgot_button}>Register </Text>
@@ -124,4 +115,3 @@ const styles = StyleSheet.create({
      // or 'stretch'
   }
 });
-

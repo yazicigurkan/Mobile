@@ -15,6 +15,7 @@ export default function App() {
         <Drawer.Navigator >
           <Drawer.Screen name="Login" component={Login}/>
           <Drawer.Screen name="Tracker" component={Tracker}/>
+          <Drawer.Screen name="Exit" component={Tracker}/>
         </Drawer.Navigator>
       </NavigationContainer>
   );

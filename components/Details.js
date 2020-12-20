@@ -10,14 +10,18 @@ export default function Details({route}){
         .catch(err=> console.log(err))
     },[])
   return (
+    <ScrollView persistentScrollbar={true}>
     <View style={styles.container}>
-      <Text>Detay</Text>
-      <Text>{route.params?.ulke}</Text>
-      <ScrollView persistentScrollbar={true}>
+      <Text style={styles.Vaka}>VAKA SAYILARI </Text>
+      </View>
+      <View style={styles.UlkeIsmıContainer}>
+      <Text style={styles.UlkeIsmı}>{route.params?.ulke}</Text>
+      </View>
+      <View style={styles.UlkeDetayContainer}>
       {
           ulke.map(detay=>
             <View style={{display:'flex',flexDirection:"row",justifyContent:"space-between",width:Width,paddingLeft:20,paddingRight:20}}>
-                <Text >
+                <Text style={styles.Tarih} >
                     {String(detay.Date).substring(0,10)}
                 </Text>
                 <Text>
@@ -26,8 +30,9 @@ export default function Details({route}){
             </View>
         )
       }
-      </ScrollView>
+     
     </View>
+    </ScrollView>
   );
 };
 
@@ -37,5 +42,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor:'grey'
+
+  },
+  UlkeIsmıContainer:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor:'#FDFD96'
+  },
+  Tarih:{
+      margin: 10
+  },
+  UlkeIsmı:{
+    fontSize:20,
+    backgroundColor:'#FDFD96'
+  },
+  Vaka:{
+    fontSize:30
   }
 });
