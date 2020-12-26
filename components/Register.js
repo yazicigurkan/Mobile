@@ -23,7 +23,7 @@ export default function Register({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email or Username"
+          placeholder="Email veya Kullanıcı İsmi"
           placeholderTextColor="#fff"
           onChangeText={(email) => setEmail(email)}
         />
@@ -32,24 +32,15 @@ export default function Register({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password"
+          placeholder="Şifre"
           placeholderTextColor="#fff"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
-      </View>
-        <View style={styles.register}>
-            <TouchableOpacity>
-                <Text style={styles.register}>Forgot Passssssword?</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text style={styles.forgot_button}>Register </Text>
-            </TouchableOpacity>
-        </View>
-      
+      </View>      
  
       <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Tracker')}>
-        <Text style={styles.loginText} >LOGIN</Text>
+        <Text style={styles.loginText} >KAYDOL</Text>
       </TouchableOpacity>
     </View>
   );

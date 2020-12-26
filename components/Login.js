@@ -14,10 +14,6 @@ import {
 } from "react-native";
  
 
-
-
-
-
 export default function Login({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +28,7 @@ export default function Login({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email or Username"
+          placeholder="Email veya Kullanıcı İsmi"
           placeholderTextColor="#fff"
           onChangeText={(email) => setEmail(email)}
         />
@@ -41,7 +37,7 @@ export default function Login({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password"
+          placeholder="Şifre"
           placeholderTextColor="#fff"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
@@ -49,16 +45,13 @@ export default function Login({navigation}) {
       </View>
         <View style={styles.register}>
             <TouchableOpacity  onPress={() => navigation.navigate('Kayit')}>
-                <Text style={styles.register}>Forgot Password?</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text style={styles.forgot_button}>Register </Text>
+                <Text style={styles.register}>Şifremi Unuttum</Text>
             </TouchableOpacity>
         </View>
       
  
       <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Tracker')}>
-        <Text style={styles.loginText} >LOGIN</Text>
+        <Text style={styles.loginText} >GİRİŞ</Text>
       </TouchableOpacity>
     </View>
   );
