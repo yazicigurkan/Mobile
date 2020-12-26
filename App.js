@@ -16,6 +16,7 @@ export default function App() {
         <Drawer.Navigator >
           <Drawer.Screen name="Giriş" component={Tab}/>
           <Drawer.Screen name="Hakkımızda" component={AboutUs}/>
+          <Drawer.Screen name="Tracker" component={Tracker}/>
         </Drawer.Navigator>
       </NavigationContainer>
   );
