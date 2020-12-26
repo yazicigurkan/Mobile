@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState,ImageBackground} from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import Register from './Register'
+import Register from './Tracker'
 
 import {
   StyleSheet,
