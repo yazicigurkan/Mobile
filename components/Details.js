@@ -9,6 +9,18 @@ export default function Details({route}){
         .then(res=> setUlke(res.data) )
         .catch(err=> console.log(err))
     },[])
+
+    function compare(a, b) {
+      if (a.Confirmed < b.Confirmed) {
+        return 1;
+      }
+      if (a.Confirmed > b.Confirmed) {
+        return -1;
+      }
+      return 0;
+    }
+  
+    ulke.sort(compare);
   return (
     <ScrollView persistentScrollbar={true}>
     <View style={styles.container}>
