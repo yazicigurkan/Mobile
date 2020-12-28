@@ -33,7 +33,6 @@ export default function Countries({ navigation }) {
               key={index} onPress={() => navigation.navigate('Detay', { ulke: ulke.Country })}
               title={ulke.Country}
             />
-            //  </TouchableOpacity>
           )
         }
       </View>
